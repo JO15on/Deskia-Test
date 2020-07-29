@@ -10,13 +10,18 @@ body {
     padding: 0;
 }
 
+html {
+    width: 100%;
+    height: 100%;
+}
+
 /* header */
 
 header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 14em;
+    height: 9em;
     z-index: 7;
 }
 
@@ -27,7 +32,7 @@ header>span {
     line-height: 30px;
 }
 
-.yellowBorder {
+.yellow-border {
     background: yellow;
     padding: .25em;
 }
@@ -36,11 +41,13 @@ header>span {
     background: white;
     display: flex;
     flex-direction: row;
+    flex: 1;
+    height: 6em;
+    align-items: center;
 }
 
 .logo {
     display: flex;
-    flex-grow: 3;
     height: auto;
     max-width: 10%;
 }
@@ -50,13 +57,13 @@ header>span {
     margin-bottom: auto;
 }
 
-.menuBar {
+.menu-bar {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.magnifyingGlass {
+.magnifying-glass {
     height: auto;
     width: 1em;
 }
@@ -64,6 +71,18 @@ header>span {
 .nav-container {
     display: flex;
     flex-direction: row;
+}
+
+.left {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.right {
+    display: flex;
+    flex: 1;
+    justify-content: center;
 }
 
 .menu-container{
@@ -156,7 +175,10 @@ h3 {
 }
 
 .subheader>p {
+    flex: 1;
+    text-align: center;
     border-right: 1px solid #0467A2;
+    padding: 8px 0px;
 }
 
 .subheader>p:last-child {
@@ -166,24 +188,26 @@ h3 {
 .main-page3 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex: 1;
+    padding: 0 8px;
     background: white;
 }
 
 .main-page4 {
     display: flex;
     flex-direction: row;
-    margin-left: auto!important;
-    margin-right: auto!important;
+    justify-content: space-evenly;
+    flex: 1;
 }
 
 .headline {
-    margin-right: 1em;
+    max-width: 30%;
+    flex: 1;
 }
 
 .secondary-headline {
-    padding: 1em 25em 0 3em;
+    max-width: 42%; 
+    flex: 1;
 }
 
 .benefits {
@@ -206,7 +230,7 @@ h3 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 10em;
+    justify-content: center;
 }
 
 .benefits-section {
@@ -228,12 +252,12 @@ h3 {
     background: #B8DFF6;
 }
 
-.picSection {
+.pic-section {
     display: flex;
     flex-direction: row;
 }
 
-.stockPhoto {
+.stock-photo {
     max-width: 50%;
     height: auto;
 }
@@ -260,14 +284,14 @@ h3 {
     font-weight: bold;
 }
 
-.infoService2 {
+.info-service2 {
     display: flex;
     flex-direction: column;
     justify-self: flex-start;
     align-items: flex-start;
 }
 
-.otherService {
+.other-service {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -275,7 +299,7 @@ h3 {
     width: 75%;
 }
 
-.otherService2 {
+.other-service2 {
     border: 1px none;
     border-radius: 1em;
     margin: 1em;
@@ -286,7 +310,7 @@ h3 {
     background: #B8DFF6;
 }
 
-.otherService2:hover {
+.other-service2:hover {
     background: #a0b1b8;
 }
 
@@ -305,7 +329,11 @@ h3 {
     background: #496591;
 }
 
-a {
+a.menu,
+a.ctalink,
+a.sign,
+a.matIcon,
+a.social {
     text-decoration: none;
     color: #B8DFF6;
 }
@@ -331,7 +359,7 @@ a {
     align-items: center;
 }
 
-.secondaryBox {
+.secondary-box {
     width: 30%;
     margin: 3em;
     background: white;
@@ -340,8 +368,8 @@ a {
     padding: 6px;
 }
 
-.secondaryBox:nth-child(3),
-.secondaryBox:nth-child(4) {
+.secondary-box:nth-child(3),
+.secondary-box:nth-child(4) {
     background: #B8DFF6;
 }
 
@@ -440,14 +468,13 @@ a {
 .material-icons {
     font-family: 'Material Icons';
     color: darkblue;
-    margin-top: .75rem;
     margin-left: auto;
     margin-right: 10em;
 }
 
 /* footer */
 
-.blueBorder {
+.blue-border {
     background: #5D85BF;
     padding: 1em;
 }
@@ -494,18 +521,86 @@ a {
 
 /* Responsive design */
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 320px) {
+
+    body {
+        width: 218vw;
+    }
+
+    .questions {
+        height: 58vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        width: 196vw;
+    }
+
+    .man {
+        display: none;
+    }
+
+    .stockPhoto {
+        display: none;
+    }
+
+    .typing {
+        display: none;
+    }
+
+    .happy-family {
+        display: none;
+    }
+
+    .footer-menu {
+        height: 12em;
+    }
 
 }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 768px) {
 
+    body {
+        width: 100vw;
+    }
+
+    .main-page2 {
+        top: 2rem;
+        width: 42%;
+    }
+
+    .logo {
+        max-width: 8%;
+    }
+
+    .logo2 {
+        max-width: 10%;
+    }
+
+    .questions {
+        height: 55vh;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
 
+    .main-page2 {
+        top: 5rem;
+        width: 28%;
+    }
+
+    .logo2 {
+        max-width: 8%;
+    }
+
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1440px) {
+
+    .main-page2 {
+        top: 11rem;
+    }
 
 }

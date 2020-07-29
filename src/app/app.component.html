@@ -1,37 +1,43 @@
 <body>
   <header>
     <span>
-      <div class="yellowBorder"></div>
+      <div class="yellow-border"></div>
 
       <div class="main-menu">
-        <img class="logo" src="assets/Novec-logo.png"/>
-        <div class="menuBar" class="closed" *ngIf="!(tablet | async).matches">
-          <img class="magnifyingGlass" src="assets/search-solid.png"/>
-          <div>
-            <ul class="nav-container">
-              <li class="menu-container"><a>MENU</a></li>
-              <li class="menu-container"><a>MENU</a></li>
-              <li class="menu-container"><a>MENU</a></li>
-              <li class="menu-container"><a>MENU</a></li>
-            </ul>
+        <div class="left">
+          <img class="logo" src="assets/Novec-logo.png"/>
+        </div>
+
+        <div class="right">
+          <div class="menu-bar" class="closed" *ngIf="!(tablet | async).matches">
+            <img class="magnifying-glass" src="assets/search-solid.png"/>
+            <div>
+              <ul class="nav-container">
+                <li class="menu-container"><a class="menu">MENU</a></li>
+                <li class="menu-container"><a class="menu">MENU</a></li>
+                <li class="menu-container"><a class="menu">MENU</a></li>
+                <li class="menu-container"><a class="menu">MENU</a></li>
+              </ul>
+            </div>
           </div>
+    
+          <div *ngIf="(tablet | async).matches" class="menu-container">
+            <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+          </div>
+    
+          <mat-sidenav-container>
+            <mat-sidenav #sidenav mode ="over" [(opened)]="opened" position='end' class="sidenav">
+              <h2>Menu</h2>
+              <ul>
+                <li><a (click)="sidenav.close()" class="menu">MENU</a></li>
+                <li><a (click)="sidenav.close()" class="menu">MENU</a></li>
+                <li><a (click)="sidenav.close()" class="menu">MENU</a></li>
+                <li><a (click)="sidenav.close()" class="menu">MENU</a></li>
+              </ul>
+            </mat-sidenav>
+          </mat-sidenav-container>
         </div>
-  
-        <div *ngIf="(tablet | async).matches" class="menu-container">
-          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-        </div>
-  
-        <mat-sidenav-container>
-          <mat-sidenav #sidenav mode ="over" [(opened)]="opened" position='end' class="sidenav">
-            <h2>Menu</h2>
-            <ul>
-              <li><a (click)="sidenav.close()">MENU</a></li>
-              <li><a (click)="sidenav.close()">MENU</a></li>
-              <li><a (click)="sidenav.close()">MENU</a></li>
-              <li><a (click)="sidenav.close()">MENU</a></li>
-            </ul>
-          </mat-sidenav>
-        </mat-sidenav-container>
+
       </div>
   
       <div class="submenu">
@@ -55,7 +61,7 @@
         <h1>NATURAL GAS SERVICES</h1>
         <h2>SUPER NEAT SUBHEAD</h2>
         <p>NOVEC Energy solutions is pleased to offer natural gas consumers in Pennsylvania, Maryland, Virgina, District of Columbia and Kentucky the option to enroll in our</p>
-        <button class="signup">SIGN UP</button>
+        <button class="signup"><a href="#" class="sign">SIGN UP</a></button>
       </div>
     </div>
 
@@ -82,7 +88,7 @@
             <li>Lorem ipsum dolor sit amet, consectetur</li>
             <li>Lorem ipsum dolor sit amet, consectetur</li>
           </ul>
-          <a href="#">Text Link Treatment ></a>
+          <a href="#" class="text">Text Link Treatment ></a>
         </div>
       </div>
 
@@ -112,22 +118,22 @@
       </div>
     </div>
 
-    <div class="picSection">
-      <img class="stockPhoto" src="assets/AdobeStock_224739957.png" />
-      <img class="stockPhoto" src="assets/AdobeStock_299906163.png" />
+    <div class="pic-section">
+      <img class="stock-photo" src="assets/AdobeStock_224739957.png" />
+      <img class="stock-photo" src="assets/AdobeStock_299906163.png" />
     </div>
 
     <div class="NatGasService">
       <h1>NATURAL GAS SERVICE AREA</h1>
       <div class="infoservice">
-        <div class="infoService2">
+        <div class="info-service2">
           <p><span class="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</span> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <h3>OTHER SERVICES</h3>
-          <div class="otherService">
-            <div class="otherService2">OTHER SERVICE</div>
-            <div class="otherService2">OTHER SERVICE</div>
-            <div class="otherService2">OTHER SERVICE</div>
-            <div class="otherService2">OTHER SERVICE</div>
+          <div class="other-service">
+            <div class="other-service2">OTHER SERVICE</div>
+            <div class="other-service2">OTHER SERVICE</div>
+            <div class="other-service2">OTHER SERVICE</div>
+            <div class="other-service2">OTHER SERVICE</div>
           </div>
           <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
           <button class="cta"><a class="ctalink" href="#">CTA</a></button>
@@ -147,20 +153,20 @@
           <li>Lorem ipsum dolor sit amet, consectetur</li>
           <li>Lorem ipsum dolor sit amet, consectetur</li>
         </ul>
-        <button class="signup"><a href="#">SIGN UP</a></button>
+        <button class="signup"><a href="#" class="sign">SIGN UP</a></button>
       </div>
     </div>
 
     <div class="secondaryMain2">
-      <div class="secondaryBox">
+      <div class="secondary-box">
         <h1>FIXED RATE VS VARIABLE RATE GAS PRICES WHAT TO KNOW</h1>
       </div>
 
-      <div class="secondaryBox">
+      <div class="secondary-box">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
       </div>
 
-      <div class="secondaryBox">
+      <div class="secondary-box">
         <h2>FIXED RATE</h2>
         <ul>
           <li>Lorem ipsum dolor sit amet, consectetur</li>
@@ -170,7 +176,7 @@
         </ul>
       </div>
 
-      <div class="secondaryBox">
+      <div class="secondary-box">
         <h2>VARIABLE RATE</h2>
         <ul>
           <li>Lorem ipsum dolor sit amet, consectetur</li>
@@ -182,8 +188,6 @@
 
       <img class="chart" src="assets/chart.png" />
     </div>
-
-
 
     <div class="testimonial">
       <div class="left-arrow"></div>
@@ -214,7 +218,7 @@
         <div class="questions2">
           <div class="questions3">
             <h3>WHAT GAS COMPANY SERVICES MY ADDRESS?</h3>
-            <a (click)=toggle()><i class="material-icons">add_circle</i></a>
+            <a (click)=toggle() class="matIcon"><i class="material-icons">add_circle</i></a>
           </div>
           <div *ngIf="!showDiv">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>        
         </div>
@@ -222,7 +226,7 @@
         <div class="questions2">
           <div class="questions3">
             <h3>CAN I SWITCH TO NATURAL GAS PROVIDERS?</h3>
-            <a (click)=toggle2()><i class="material-icons">add_circle</i></a>
+            <a (click)=toggle2() class="matIcon"><i class="material-icons">add_circle</i></a>
           </div>
           <div *ngIf="!showDiv2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>        
         </div>
@@ -230,7 +234,7 @@
         <div class="questions2">
           <div class="questions3">
             <h3>HOW TO GET TO NATURAL GAS IN MY NEIGHBORHOODS?</h3>
-            <a (click)=toggle3()><i class="material-icons">add_circle</i></a>
+            <a (click)=toggle3() class="matIcon"><i class="material-icons">add_circle</i></a>
           </div> 
           <div *ngIf="!showDiv3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>        
         </div>
@@ -241,19 +245,19 @@
   </main>
 
   <footer>
-    <div class="blueBorder"></div>
+    <div class="blue-border"></div>
 
     <div class="footer-menu">
       <img class="logo2" src="assets/Novec-logo-1.png" />
       <div class="footer-menu2">
         <div class="social-media">
-          <a href="https://www.facebook.com/novecenergysolutions">
+          <a href="https://www.facebook.com/novecenergysolutions" class="social">
             <img class="social-media2" src="assets/iconfinder_Rounded_Facebook_svg_5282541.png"/>
           </a>
-          <a href="https://twitter.com/NOVECENERGY">
+          <a href="https://twitter.com/NOVECENERGY" class="social">
             <img class="social-media2" src="assets/iconfinder_Rounded_Twitter5_svg_5282551.png"/>
           </a>
-          <a href="https://www.youtube.com/channel/UCkFKWeh83t8BAyIPxcGQZsA">
+          <a href="https://www.youtube.com/channel/UCkFKWeh83t8BAyIPxcGQZsA" class="social">
             <img class="social-media2" src="assets/iconfinder_Rounded_Youtube3_svg_5282548.png"/>
           </a>
         </div>
@@ -268,6 +272,6 @@
       </div>
     </div>
 
-    <div class="yellowBorder"></div>
+    <div class="yellow-border"></div>
   </footer>
 </body>
