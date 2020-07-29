@@ -1,0 +1,273 @@
+<body>
+  <header>
+    <span>
+      <div class="yellowBorder"></div>
+
+      <div class="main-menu">
+        <img class="logo" src="assets/Novec-logo.png"/>
+        <div class="menuBar" class="closed" *ngIf="!(tablet | async).matches">
+          <img class="magnifyingGlass" src="assets/search-solid.png"/>
+          <div>
+            <ul class="nav-container">
+              <li class="menu-container"><a>MENU</a></li>
+              <li class="menu-container"><a>MENU</a></li>
+              <li class="menu-container"><a>MENU</a></li>
+              <li class="menu-container"><a>MENU</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div *ngIf="(tablet | async).matches" class="menu-container">
+          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </div>
+  
+        <mat-sidenav-container>
+          <mat-sidenav #sidenav mode ="over" [(opened)]="opened" position='end' class="sidenav">
+            <h2>Menu</h2>
+            <ul>
+              <li><a (click)="sidenav.close()">MENU</a></li>
+              <li><a (click)="sidenav.close()">MENU</a></li>
+              <li><a (click)="sidenav.close()">MENU</a></li>
+              <li><a (click)="sidenav.close()">MENU</a></li>
+            </ul>
+          </mat-sidenav>
+        </mat-sidenav-container>
+      </div>
+  
+      <div class="submenu">
+        <p>SUB MENU</p>
+        <p>SUB MENU</p>
+        <p>SUB MENU</p>
+        <p>SUB MENU</p>
+        <p>SUB MENU</p>
+        <p>SUB MENU</p>
+        <p>SUB MENU</p>
+      </div>
+    </span>
+  </header>
+
+  <main>
+    <div class="main-page">
+      <div class="mainPic">
+        <img class="man" src="assets/AdobeStock_291470656a copy.png" />
+      </div>
+      <div class="main-page2">
+        <h1>NATURAL GAS SERVICES</h1>
+        <h2>SUPER NEAT SUBHEAD</h2>
+        <p>NOVEC Energy solutions is pleased to offer natural gas consumers in Pennsylvania, Maryland, Virgina, District of Columbia and Kentucky the option to enroll in our</p>
+        <button class="signup">SIGN UP</button>
+      </div>
+    </div>
+
+    <div class="subheader">
+      <p>BILLING & PAYMENT</p>
+      <p>REPORT A PROBLEM</p>
+      <p>MOVING OR CANCELING SERVICE</p>
+      <p>SWITCHING SERVICE PROVIDERS</p>
+    </div>
+
+    <div class="main-page3">
+      <div class="main-page4">
+        <div class="headline">
+          <h1>H1. HEADLINE 1 STYLING AND SPACING</h1>
+          <h2>H2. HEADLINE 2 STYLING & SPACING</h2>
+          <h3>H3. SUBHEAD STYLING & SPACING FOR THIS WEBSITE</h3>
+        </div>
+
+        <div class="secondary-headline">
+          <p><span class="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmond tempor incididunt</span> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur</li>
+            <li>Lorem ipsum dolor sit amet, consectetur</li>
+            <li>Lorem ipsum dolor sit amet, consectetur</li>
+            <li>Lorem ipsum dolor sit amet, consectetur</li>
+          </ul>
+          <a href="#">Text Link Treatment ></a>
+        </div>
+      </div>
+
+      <div class="benefits">
+        <h1>BENEFITS OF BUYING NATURAL GAS THROUGH NOVEC</h1>
+        <div class="benefits2">
+          <div class="benefits-section">
+            <h2>BENEFIT #1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          </div>
+
+          <div class="benefits-section">
+            <h2>BENEFIT #2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          </div>
+
+          <div class="benefits-section">
+            <h2>BENEFIT #3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          </div>
+
+          <div class="benefits-section">
+            <h2>BENEFIT #4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="picSection">
+      <img class="stockPhoto" src="assets/AdobeStock_224739957.png" />
+      <img class="stockPhoto" src="assets/AdobeStock_299906163.png" />
+    </div>
+
+    <div class="NatGasService">
+      <h1>NATURAL GAS SERVICE AREA</h1>
+      <div class="infoservice">
+        <div class="infoService2">
+          <p><span class="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</span> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h3>OTHER SERVICES</h3>
+          <div class="otherService">
+            <div class="otherService2">OTHER SERVICE</div>
+            <div class="otherService2">OTHER SERVICE</div>
+            <div class="otherService2">OTHER SERVICE</div>
+            <div class="otherService2">OTHER SERVICE</div>
+          </div>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          <button class="cta"><a class="ctalink" href="#">CTA</a></button>
+        </div>
+        <img class="usa" src="assets/Screen Shot 2020-04-13 at 2.50.46 PM.png"/>
+      </div>
+    </div>
+
+    <div class="secondaryMain">
+      <img class="happy-family" src="assets/AdobeStock_300395016.png"/>
+      <div>
+        <h2>H2. HEADLINE 2 STYLING & SPACING</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+        </ul>
+        <button class="signup"><a href="#">SIGN UP</a></button>
+      </div>
+    </div>
+
+    <div class="secondaryMain2">
+      <div class="secondaryBox">
+        <h1>FIXED RATE VS VARIABLE RATE GAS PRICES WHAT TO KNOW</h1>
+      </div>
+
+      <div class="secondaryBox">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+      </div>
+
+      <div class="secondaryBox">
+        <h2>FIXED RATE</h2>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+        </ul>
+      </div>
+
+      <div class="secondaryBox">
+        <h2>VARIABLE RATE</h2>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+          <li>Lorem ipsum dolor sit amet, consectetur</li>
+        </ul>
+      </div>
+
+      <img class="chart" src="assets/chart.png" />
+    </div>
+
+
+
+    <div class="testimonial">
+      <div class="left-arrow"></div>
+      <img class="jim" src="assets/AdobeStock_190536658.png"/>
+      <div class="testimonial2">
+        <h2>“I have never had a bad experience with Novec and I have been a customer of theirs since 1997. They recently processed a change of service for me and whenever I call with a question, they are always very helpful. I appreciate that in a service environment it isn’t always easy dealing with people or their situations, but they do their best.”</h2>
+        <h3>JIM SMITH, CUSTOMER SINCE 1997</h3>
+      </div>
+      <div class="right-arrow"></div>
+    </div>
+
+    <div class="picSection2">
+      <img class="typing" src="assets/AdobeStock_244647617.png"/>
+    </div>
+
+    <div class="FAQ">
+      <div class="FAQ-CAT">
+        <h1>FREQUENTLY ASKED QUESTIONS</h1>
+        <ul class="FAQ-LIST">
+          <li class="FAQ-CAT2">FAQ CATEGORY</li>
+          <li class="FAQ-CAT2">FAQ CATEGORY</li>
+          <li class="FAQ-CAT2">FAQ CATEGORY</li>
+          <li class="FAQ-CAT2">FAQ CATEGORY</li>
+        </ul>
+      </div>
+
+      <div class="questions">
+        <div class="questions2">
+          <div class="questions3">
+            <h3>WHAT GAS COMPANY SERVICES MY ADDRESS?</h3>
+            <a (click)=toggle()><i class="material-icons">add_circle</i></a>
+          </div>
+          <div *ngIf="!showDiv">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>        
+        </div>
+
+        <div class="questions2">
+          <div class="questions3">
+            <h3>CAN I SWITCH TO NATURAL GAS PROVIDERS?</h3>
+            <a (click)=toggle2()><i class="material-icons">add_circle</i></a>
+          </div>
+          <div *ngIf="!showDiv2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>        
+        </div>
+
+        <div class="questions2">
+          <div class="questions3">
+            <h3>HOW TO GET TO NATURAL GAS IN MY NEIGHBORHOODS?</h3>
+            <a (click)=toggle3()><i class="material-icons">add_circle</i></a>
+          </div> 
+          <div *ngIf="!showDiv3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>        
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="blueBorder"></div>
+
+    <div class="footer-menu">
+      <img class="logo2" src="assets/Novec-logo-1.png" />
+      <div class="footer-menu2">
+        <div class="social-media">
+          <a href="https://www.facebook.com/novecenergysolutions">
+            <img class="social-media2" src="assets/iconfinder_Rounded_Facebook_svg_5282541.png"/>
+          </a>
+          <a href="https://twitter.com/NOVECENERGY">
+            <img class="social-media2" src="assets/iconfinder_Rounded_Twitter5_svg_5282551.png"/>
+          </a>
+          <a href="https://www.youtube.com/channel/UCkFKWeh83t8BAyIPxcGQZsA">
+            <img class="social-media2" src="assets/iconfinder_Rounded_Youtube3_svg_5282548.png"/>
+          </a>
+        </div>
+
+        <div>
+          <h3 class="novec">2020 NOVEC | ALL RIGHTS RESERVED</h3>
+        </div>
+        
+        <div>
+          <h3 class="novec2">PRIVACY & LEGAL STATEMENT | SITE MAP | CAREERS | NOVEC EN ESPAÑOL</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="yellowBorder"></div>
+  </footer>
+</body>
