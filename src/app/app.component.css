@@ -594,6 +594,15 @@ a.social:after {
         width: 28%;
     }
 
+    .infoservice {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .usa {
+        max-width: 95%;
+    }
+
     .stockPhoto {
         display: none;
     }
@@ -625,6 +634,15 @@ a.social:after {
 
     .logo {
         max-width: 8%;
+    }
+
+    .infoservice {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .usa {
+        max-width: 95%;
     }
 
     .logo2 {
