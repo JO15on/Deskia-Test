@@ -103,6 +103,16 @@ header>span {
     padding: .5rem;
 }
 
+.submenu2 {
+    color: #B8DFF6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.submenu2:after {
+    color: #B8DFF6
+}
+
 div.submenu {
     padding: 0;
     margin: 0;
@@ -135,6 +145,7 @@ div.submenu {
 
 h1 {
     color: #0467A2;
+    font-weight: bold;
 }
 
 h2 {
@@ -183,6 +194,15 @@ h3 {
 
 .subheader>p:last-child {
     border-right: none;
+}
+
+.subheader2 {
+    text-decoration: none;
+    color: #0467A2
+}
+
+.subheader2:after {
+    color: #0467A2;
 }
 
 .main-page3 {
@@ -273,6 +293,7 @@ h3 {
 .infoservice {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .usa {
@@ -284,11 +305,17 @@ h3 {
     font-weight: bold;
 }
 
+span.bold {
+    font-weight: bold;
+}
+
 .info-service2 {
     display: flex;
     flex-direction: column;
     justify-self: flex-start;
     align-items: flex-start;
+    justify-content: center;
+    flex: 1;
 }
 
 .other-service {
@@ -297,6 +324,11 @@ h3 {
     flex-wrap: wrap;
     text-align: center;
     width: 75%;
+}
+
+.other-services-title {
+    font-weight: bold;
+    margin: 0;
 }
 
 .other-service2 {
@@ -308,6 +340,7 @@ h3 {
     justify-content: center;
     align-items: center;
     background: #B8DFF6;
+    color: #0467A2;
 }
 
 .other-service2:hover {
@@ -329,12 +362,28 @@ h3 {
     background: #496591;
 }
 
+a.text {
+    color: blue;
+}
+
+a.text:after {
+    color: blue;
+}
+
 a.menu,
 a.ctalink,
 a.sign,
 a.matIcon,
 a.social {
     text-decoration: none;
+    color: #B8DFF6;
+}
+
+a.menu:after,
+a.ctalink::after,
+a.sign:after,
+a.matIcon:after,
+a.social:after {
     color: #B8DFF6;
 }
 
@@ -469,7 +518,6 @@ a.social {
     font-family: 'Material Icons';
     color: darkblue;
     margin-left: auto;
-    margin-right: 10em;
 }
 
 /* footer */
@@ -542,6 +590,10 @@ a.social {
         display: none;
     }
 
+    .other-service2 {
+        width: 28%;
+    }
+
     .stockPhoto {
         display: none;
     }
@@ -601,6 +653,18 @@ a.social {
 
     .main-page2 {
         top: 11rem;
+    }
+
+    .headline {
+        max-width: 23%;
+    }
+
+    .secondary-headline {
+        max-width: 33%;
+    }
+
+    .info-service2 {
+        max-width: 25%;
     }
 
 }
