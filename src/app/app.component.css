@@ -691,6 +691,12 @@ a.social:after {
         max-width: 33%;
     }
 
+    .infoservice {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     .info-service2 {
         max-width: 25%;
     }
